@@ -1,65 +1,95 @@
-# North Owl Website
+# North Owl
 
-Production-ready official website for North Owl, built with Next.js 15 App Router, TypeScript, Tailwind CSS, Framer Motion, Lucide React, React Hook Form, Zod, Resend, MDX, and Vercel.
+Building Intelligent Systems for Modern Organizations.
 
-## Stack
+North Owl is an AI and software engineering company focused on designing, building, and deploying intelligent systems that help organizations automate operations, improve decision-making, and scale efficiently.
 
-- Next.js 15 App Router with TypeScript
-- Tailwind CSS with a deep charcoal design system
-- Framer Motion route and section animations
-- Lucide React icon system
-- React Hook Form + Zod contact validation
-- Resend email delivery through `/api/contact`
-- MDX support for insight content
-- Enterprise SEO: metadata, canonical URLs, OpenGraph image generation, robots, sitemap, manifest, and JSON-LD
+## About
 
-## Local Development
+We specialize in combining Artificial Intelligence, backend engineering, cloud infrastructure, and enterprise software development to create production-ready solutions for modern organizations.
 
-```bash
-npm install
-npm run dev
-```
+Our approach focuses on solving real operational problems through reliable, secure, and scalable technology systems.
 
-Open `http://localhost:3000`.
+## Services
 
-## Environment
+### AI Agents & Agentic Systems
+Design and deployment of autonomous AI workflows, intelligent assistants, and multi-agent systems.
 
-Copy `.env.example` to `.env.local` and set:
+### Business Process Automation
+Automation of repetitive business operations using AI, APIs, and workflow orchestration.
 
-```bash
-RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxx
-CONTACT_FROM="North Owl <hello@northowl.in>"
-CONTACT_TO="shimant@northowl.in,hello@northowl.in"
-NEXT_PUBLIC_SITE_URL=https://northowl.in
-```
+### Backend Engineering
+High-performance backend systems using FastAPI, Python, PostgreSQL, and cloud-native architectures.
 
-For Resend production delivery, verify `northowl.in` in Resend and use a verified sender such as `North Owl <hello@northowl.in>`.
+### SaaS Development
+Development of scalable Software-as-a-Service platforms for startups and enterprises.
 
-## Quality Commands
+### Full Stack Applications
+End-to-end web applications with modern frontend and backend technologies.
 
-```bash
-npm run lint
-npm run typecheck
-npm run build
-```
+### Cloud Infrastructure
+Deployment, monitoring, and scaling across modern cloud platforms.
 
-The site is designed for a 95+ Lighthouse target through server-rendered pages, lightweight canvas animation, optimized CSS, no stock media, no external font downloads, accessible controls, and reduced-motion support.
+### Data Engineering
+Data pipelines, analytics systems, and intelligent reporting infrastructure.
 
-## Deployment on Vercel
+### Enterprise Consulting
+Technology strategy, architecture planning, and digital transformation initiatives.
 
-1. Import the repository into Vercel.
-2. Set the production domain to `northowl.in`.
-3. Add the environment variables from `.env.example`.
-4. Deploy with the default Next.js preset.
-5. Confirm `/api/contact` sends to `shimant@northowl.in` and `hello@northowl.in`.
-6. Run Lighthouse against the production deployment after DNS and Resend are configured.
+## Industries
 
-## Content and Configuration
+- Healthcare
+- Government & Public Sector
+- Enterprise Operations
+- Education
+- Creator Economy
+- Technology Startups
 
-- Global company configuration lives in `src/lib/site-data.ts`.
-- Contact validation lives in `src/lib/contact.ts`.
-- Email rendering lives in `src/lib/email.ts`.
-- SEO helpers live in `src/lib/seo.ts`.
-- MDX insight content lives in `src/content/insights`.
+## Founder
 
-Update social URLs in `src/lib/site-data.ts` if North Owl uses a different official GitHub organization or LinkedIn company page.
+### Shimant Ranjan
+Founder & CEO
+
+AI/ML Developer, Backend Systems Engineer, and Technology Entrepreneur.
+
+Achievements:
+
+- IBM BOB Dev 2026 International Hackathon Winner
+- OpenAI × Outskill National Hackathon Finalist
+- Top 1000 selected among 20,000+ developers
+- Builder of AI systems, automation platforms, and scalable backend infrastructure
+
+## Technology Stack
+
+- Python
+- FastAPI
+- PostgreSQL
+- Next.js
+- TypeScript
+- React
+- Docker
+- Cloud Infrastructure
+- REST APIs
+- AI/ML Systems
+
+## Philosophy
+
+> Intelligence creates value only when it becomes a reliable system people can use every day.
+
+North Owl exists to bridge the gap between AI innovation and real-world deployment.
+
+## Contact
+
+Website: https://northowl.in
+
+Email: shimant@northowl.in
+
+LinkedIn: https://www.linkedin.com/company/north-owl/
+
+GitHub: https://github.com/shimantranjan
+
+X (Twitter): https://x.com/ShimantRanjan
+
+---
+
+© 2026 North Owl. All Rights Reserved.
