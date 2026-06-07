@@ -7,6 +7,8 @@ import { IndustriesSection } from "@/components/sections/industries-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { TechStackSection } from "@/components/sections/tech-stack-section";
 import { WhyNorthOwlSection } from "@/components/sections/why-north-owl-section";
+import { AchievementsSection } from "@/components/sections/achievements-section";
+import { PrinciplesSection } from "@/components/sections/principles-section";
 
 export default function HomePage() {
   return (
@@ -16,6 +18,8 @@ export default function HomePage() {
       <IndustriesSection />
       <FeaturedSolutionsSection />
       <WhyNorthOwlSection />
+      <AchievementsSection />
+      <PrinciplesSection />
       <FounderSection />
       <TechStackSection />
       <CaseStudiesSection />

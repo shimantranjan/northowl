@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { FounderSection } from "@/components/sections/founder-section";
 import { IndustriesSection } from "@/components/sections/industries-section";
 import { WhyNorthOwlSection } from "@/components/sections/why-north-owl-section";
+import { AchievementsSection } from "@/components/sections/achievements-section";
+import { PrinciplesSection } from "@/components/sections/principles-section";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -16,6 +18,8 @@ export default function AboutPage() {
     <>
       <FounderSection />
       <WhyNorthOwlSection />
+      <AchievementsSection />
+      <PrinciplesSection />
       <IndustriesSection />
     </>
   );

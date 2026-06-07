@@ -20,7 +20,7 @@ function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="h-9 w-9 rounded-full border border-north-line bg-north-charcoal/10" />
+      <div className="h-9 w-9 rounded-full border border-neutral-800 bg-white/5" />
     );
   }
 
@@ -34,7 +34,7 @@ function ThemeToggle() {
     <button
       type="button"
       onClick={cycleTheme}
-      className="grid h-9 w-9 place-items-center rounded-full border border-north-line bg-north-charcoal/10 text-north-muted transition hover:border-north-accent/50 hover:text-neutral-950 dark:hover:text-white shrink-0"
+      className="grid h-9 w-9 place-items-center rounded-full border border-neutral-800 bg-white/5 text-neutral-400 transition hover:border-neutral-700 hover:text-white shrink-0"
       aria-label={`Current theme is ${theme}. Click to cycle theme.`}
     >
       {theme === "light" && <Sun className="h-4 w-4" />}
@@ -72,7 +72,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-north-line bg-north-black/80 backdrop-blur-xl transition-colors duration-300">
+    <header className="sticky top-0 z-50 border-b border-neutral-800 bg-black transition-colors duration-300">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Logo />
         
@@ -83,8 +83,8 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={cn(
-                "rounded-full px-4 py-2 text-sm font-medium text-north-muted transition hover:bg-north-charcoal/40 hover:text-neutral-950 dark:hover:text-white",
-                pathname === item.href && "bg-north-surface text-neutral-950 dark:text-white"
+                "rounded-full px-4 py-2 text-sm font-medium text-neutral-300 transition hover:bg-white/10 hover:text-white",
+                pathname === item.href && "bg-white/15 text-white font-semibold"
               )}
             >
               {item.label}
@@ -97,7 +97,7 @@ export function Header() {
           <ThemeToggle />
           <Link
             href="/contact"
-            className="rounded-full border border-north-line bg-north-charcoal/20 px-4 py-2 text-sm font-semibold text-neutral-950 dark:text-white transition hover:border-north-accent/50 hover:bg-north-surface"
+            className="rounded-full border border-neutral-800 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/15"
           >
             Book Consultation
           </Link>
@@ -108,7 +108,7 @@ export function Header() {
           <ThemeToggle />
           <button
             type="button"
-            className="grid h-10 w-10 place-items-center rounded-full border border-north-line bg-north-charcoal/20 text-north-muted hover:text-neutral-950 dark:hover:text-white"
+            className="grid h-12 w-12 place-items-center rounded-full border border-neutral-800 bg-white/10 text-neutral-300 hover:text-white transition-all"
             onClick={() => setOpen((value) => !value)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
@@ -136,15 +136,15 @@ export function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
-              className="fixed inset-y-0 right-0 z-50 w-full max-w-[300px] bg-north-charcoal px-6 py-5 shadow-2xl md:hidden flex flex-col justify-between border-l border-north-line"
+              className="fixed inset-y-0 right-0 z-50 w-full max-w-[300px] bg-black px-6 py-5 shadow-2xl md:hidden flex flex-col justify-between border-l border-neutral-800"
             >
               <div className="flex flex-col gap-6">
-                <div className="flex items-center justify-between border-b border-north-line pb-4">
+                <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
                   <Logo />
                   <button
                     type="button"
                     onClick={() => setOpen(false)}
-                    className="grid h-8 w-8 place-items-center rounded-full border border-north-line text-north-muted hover:text-neutral-950 dark:hover:text-white"
+                    className="grid h-12 w-12 place-items-center rounded-full border border-neutral-800 text-neutral-300 hover:text-white"
                     aria-label="Close menu"
                   >
                     <X className="h-4 w-4" />
@@ -157,8 +157,8 @@ export function Header() {
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "rounded-lg px-4 py-3 text-sm font-medium text-north-muted transition hover:bg-north-surface/50 hover:text-neutral-950 dark:hover:text-white",
-                        pathname === item.href && "bg-north-surface text-neutral-950 dark:text-white"
+                        "rounded-lg px-4 py-3 text-sm font-medium text-neutral-300 transition hover:bg-white/10 hover:text-white",
+                        pathname === item.href && "bg-white/15 text-white font-semibold"
                       )}
                     >
                       {item.label}
@@ -167,11 +167,11 @@ export function Header() {
                 </nav>
               </div>
 
-              <div className="space-y-4 pt-6 border-t border-north-line">
+              <div className="space-y-4 pt-6 border-t border-neutral-800">
                 <Link
                   href="/contact"
                   onClick={() => setOpen(false)}
-                  className="block w-full rounded-full bg-north-black border border-north-line px-4 py-3 text-center text-sm font-semibold text-neutral-950 dark:text-white hover:bg-north-surface transition-all active:scale-[0.98] shadow-md"
+                  className="block w-full rounded-full bg-white border border-transparent px-4 py-3 text-center text-sm font-semibold text-black hover:bg-neutral-200 transition-all active:scale-[0.98] shadow-md"
                 >
                   Book Consultation
                 </Link>

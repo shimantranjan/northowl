@@ -44,9 +44,9 @@ export function WhyNorthOwlSection() {
               {comparisonRows.map((row) => (
                 <tr key={row.capability} className="border-t border-north-line bg-north-card/25 transition hover:bg-north-charcoal/30">
                   <th className="px-5 py-5 align-top text-sm font-semibold text-neutral-900 dark:text-white">{row.capability}</th>
-                  <td className="px-5 py-5 align-top text-sm leading-6 text-north-muted">{row.agencies}</td>
-                  <td className="px-5 py-5 align-top text-sm leading-6 text-north-muted">{row.freelancers}</td>
-                  <td className="px-5 py-5 align-top text-sm leading-6 text-north-muted">{row.offshore}</td>
+                  <td className="px-5 py-5 align-top text-sm leading-6 text-neutral-600 dark:text-neutral-400">{row.agencies}</td>
+                  <td className="px-5 py-5 align-top text-sm leading-6 text-neutral-600 dark:text-neutral-400">{row.freelancers}</td>
+                  <td className="px-5 py-5 align-top text-sm leading-6 text-neutral-600 dark:text-neutral-400">{row.offshore}</td>
                   <td className="px-5 py-5 align-top text-sm leading-6 text-neutral-950 dark:text-white">
                     <span className="inline-flex gap-2">
                       <Check className="mt-1 h-4 w-4 flex-none text-north-accent" />
@@ -86,8 +86,8 @@ export function WhyNorthOwlSection() {
                 <p className="text-sm font-semibold text-neutral-900 dark:text-white">{row.capability}</p>
                 <div className="mt-4 grid gap-3">
                   <div className="rounded-md bg-north-charcoal/10 p-4">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-north-muted">{activeCompetitor.label}</p>
-                    <p className="mt-2 text-sm leading-6 text-north-muted">{row[active]}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">{activeCompetitor.label}</p>
+                    <p className="mt-2 text-sm leading-6 text-neutral-600 dark:text-neutral-400">{row[active]}</p>
                   </div>
                   <div className="rounded-md border border-north-accent/25 bg-north-accent/5 p-4">
                     <p className="text-[10px] font-bold uppercase tracking-wider text-north-accent">North Owl</p>

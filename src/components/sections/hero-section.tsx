@@ -5,6 +5,7 @@ import { ArrowDownRight, CalendarCheck, ShieldCheck } from "lucide-react";
 import { AiNetwork } from "@/components/visuals/ai-network";
 import { LiveMetricsPanel } from "@/components/visuals/live-metrics-panel";
 import { CtaLink } from "@/components/ui/cta-link";
+import { TaglineReveal } from "@/components/animation/tagline-reveal";
 import { trustSignals } from "@/lib/site-data";
 
 export function HeroSection() {
@@ -29,8 +30,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            Building Intelligent Systems
-            <span className="block text-neutral-900/70 dark:text-white/70">for Modern Organizations</span>
+            <TaglineReveal />
           </motion.h1>
           <motion.p
             className="mt-7 max-w-3xl text-base leading-8 text-north-muted md:text-xl md:leading-9"
