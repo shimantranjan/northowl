@@ -1,14 +1,18 @@
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { ThemeProvider } from "@/components/theme-provider";
-import { buildMetadata, organizationSchema, websiteSchema } from "@/lib/seo";
+import {
+  buildMetadata,
+  organizationSchema,
+  websiteSchema
+} from "@/lib/seo";
 
 import "./globals.css";
 
-export const metadata = buildMetadata();
+export const metadata: Metadata = buildMetadata();
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -21,7 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="scroll-smooth"
+      suppressHydrationWarning
+    >
       <body>
         <script
           type="application/ld+json"
@@ -29,6 +37,7 @@ export default function RootLayout({
             __html: JSON.stringify(organizationSchema()),
           }}
         />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -42,10 +51,15 @@ export default function RootLayout({
           enableSystem
         >
           <Header />
-          <main>{children}</main>
+
+          <main>
+            {children}
+          </main>
+
           <Footer />
         </ThemeProvider>
 
+        {/* Vercel Analytics */}
         <Analytics />
       </body>
     </html>
